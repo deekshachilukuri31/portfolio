@@ -1,12 +1,56 @@
 import Reveal from "../Reveal";
 
-const PLACEHOLDER_SKILLS = [
-  "Skill one",
-  "Skill two",
-  "Skill three",
-  "Skill four",
-  "Skill five",
-  "Skill six",
+const SKILL_GROUPS = [
+  {
+    category: "Programming Languages",
+    skills: ["R", "Python", "Java", "Scala", "SAS", "HiveQL", "MQL", "SQL", "C", "C++"],
+  },
+  {
+    category: "Tools",
+    skills: [
+      "Alteryx",
+      "Looker",
+      "Tableau",
+      "Kibana",
+      "Jira",
+      "GIT/Bitbucket",
+      "R Studio",
+      "ELK Stack",
+      "Airflow",
+      "Databricks",
+      "Snowflake",
+      "dbt",
+    ],
+  },
+  {
+    category: "Data Management",
+    skills: ["MySQL", "NoSQL", "Spark", "Hue", "Hive", "Flink", "Kafka"],
+  },
+  {
+    category: "Cloud & DevOps",
+    skills: ["AWS", "Azure", "Jenkins", "Docker", "Kubernetes"],
+  },
+  {
+    category: "Analytical & ML Expertise",
+    skills: [
+      "Statistical Tests (T-test, ANOVA, Chi-square)",
+      "Causal Inference",
+      "Supervised & Unsupervised Algorithms",
+      "Natural Language Processing (NLP)",
+    ],
+  },
+  {
+    category: "AI & LLMs",
+    skills: [
+      "Claude",
+      "MCP",
+      "Prompt Engineering",
+      "Agentic AI Workflows",
+      "RAG",
+      "LLM Applications",
+      "Vector Databases",
+    ],
+  },
 ];
 
 export default function Skills() {
@@ -19,16 +63,25 @@ export default function Skills() {
           </h2>
         </Reveal>
 
-        <Reveal delay={0.1} className="mt-8 flex flex-wrap gap-3">
-          {PLACEHOLDER_SKILLS.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-muted transition-colors hover:border-accent hover:text-text"
-            >
-              {skill}
-            </span>
+        <div className="mt-10 flex flex-col gap-8">
+          {SKILL_GROUPS.map((group, i) => (
+            <Reveal key={group.category} delay={0.05 * (i + 1)}>
+              <h3 className="text-sm font-medium tracking-wide text-accent">
+                {group.category}
+              </h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-muted transition-colors hover:border-accent hover:text-text"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

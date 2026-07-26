@@ -5,9 +5,10 @@ import { Menu, X } from "lucide-react";
 
 const LINKS = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -47,15 +48,6 @@ export default function Nav() {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <a
-            href="/portfolio/resume.pdf"
-            className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-text transition-transform hover:-translate-y-0.5"
-          >
-            Resume
-          </a>
-        </div>
-
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -79,13 +71,6 @@ export default function Nav() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="/portfolio/resume.pdf"
-              className="mt-2 w-fit rounded-full bg-accent px-5 py-2 text-sm font-medium text-text"
-              onClick={() => setOpen(false)}
-            >
-              Resume
-            </a>
           </div>
         </div>
       )}

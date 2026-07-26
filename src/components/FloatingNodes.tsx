@@ -6,24 +6,19 @@ type Node = {
   top: number;
   left: number;
   size: number;
-  duration: number;
-  delay: number;
+  driftDuration: number;
+  driftDelay: number;
+  glowDuration: number;
+  glowDelay: number;
 };
 
 const NODES: Node[] = [
-  { top: 15, left: 10, size: 10, duration: 7, delay: 0 },
-  { top: 30, left: 80, size: 14, duration: 8, delay: 1 },
-  { top: 55, left: 25, size: 8, duration: 6, delay: 0.5 },
-  { top: 65, left: 65, size: 12, duration: 9, delay: 2 },
-  { top: 80, left: 40, size: 10, duration: 7.5, delay: 1.5 },
-  { top: 22, left: 52, size: 8, duration: 6.5, delay: 2.5 },
-];
-
-const LINKS: [number, number, number][] = [
-  [0, 2, 0],
-  [2, 4, 1.2],
-  [1, 3, 0.6],
-  [3, 5, 1.8],
+  { top: 15, left: 10, size: 10, driftDuration: 7, driftDelay: 0, glowDuration: 4.5, glowDelay: 0 },
+  { top: 30, left: 80, size: 16, driftDuration: 8, driftDelay: 1, glowDuration: 5.5, glowDelay: 0.8 },
+  { top: 55, left: 25, size: 8, driftDuration: 6, driftDelay: 0.5, glowDuration: 4, glowDelay: 1.6 },
+  { top: 65, left: 65, size: 13, driftDuration: 9, driftDelay: 2, glowDuration: 6, glowDelay: 0.4 },
+  { top: 80, left: 40, size: 10, driftDuration: 7.5, driftDelay: 1.5, glowDuration: 5, glowDelay: 2.2 },
+  { top: 22, left: 52, size: 7, driftDuration: 6.5, driftDelay: 2.5, glowDuration: 4.8, glowDelay: 1.2 },
 ];
 
 export default function FloatingNodes() {
@@ -39,60 +34,44 @@ export default function FloatingNodes() {
         }}
       />
 
-      <svg
-        className="absolute inset-0 h-full w-full"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-      >
-        {LINKS.map(([a, b, delay], i) => {
-          const from = NODES[a];
-          const to = NODES[b];
-          return (
-            <motion.line
-              key={i}
-              x1={from.left}
-              y1={from.top}
-              x2={to.left}
-              y2={to.top}
-              stroke="var(--accent)"
-              strokeWidth={0.15}
-              initial={{ opacity: 0.15 }}
-              animate={
-                shouldReduceMotion
-                  ? { opacity: 0.25 }
-                  : { opacity: [0.15, 0.6, 0.15] }
-              }
-              transition={{
-                duration: 5 + i * 0.4,
-                repeat: shouldReduceMotion ? 0 : Infinity,
-                ease: "easeInOut",
-                delay,
-              }}
-            />
-          );
-        })}
-      </svg>
-
       {NODES.map((node, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-accent"
-          style={{
-            top: `${node.top}%`,
-            left: `${node.left}%`,
-            width: node.size,
-            height: node.size,
-            boxShadow: "0 0 12px 2px var(--accent)",
-          }}
+          className="absolute"
+          style={{ top: `${node.top}%`, left: `${node.left}%` }}
           initial={{ y: 0 }}
           animate={shouldReduceMotion ? { y: 0 } : { y: [0, -18, 0] }}
           transition={{
-            duration: node.duration,
+            duration: node.driftDuration,
             repeat: shouldReduceMotion ? 0 : Infinity,
             ease: "easeInOut",
-            delay: node.delay,
+            delay: node.driftDelay,
           }}
-        />
+        >
+          <motion.div
+            className="rounded-full bg-accent"
+            style={{ width: node.size, height: node.size }}
+            initial={{ opacity: 0.5, boxShadow: "0 0 10px 2px var(--accent)" }}
+            animate={
+              shouldReduceMotion
+                ? { opacity: 0.8 }
+                : {
+                    opacity: [0.4, 1, 0.4],
+                    boxShadow: [
+                      "0 0 8px 2px var(--accent)",
+                      "0 0 22px 6px var(--accent)",
+                      "0 0 8px 2px var(--accent)",
+                    ],
+                  }
+            }
+            transition={{
+              duration: node.glowDuration,
+              repeat: shouldReduceMotion ? 0 : Infinity,
+              ease: "easeInOut",
+              delay: node.glowDelay,
+            }}
+          />
+        </motion.div>
       ))}
     </div>
   );

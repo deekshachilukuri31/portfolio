@@ -1,6 +1,33 @@
-import { Mail } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons";
 import Reveal from "../Reveal";
+
+const CONTACT_ITEMS = [
+  {
+    label: "Email",
+    value: "deekshachilukuri31@gmail.com",
+    href: "mailto:deekshachilukuri31@gmail.com",
+    icon: Mail,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/deekshachilukuri",
+    href: "https://www.linkedin.com/in/deekshachilukuri/",
+    icon: LinkedinIcon,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/deekshachilukuri31",
+    href: "https://github.com/deekshachilukuri31",
+    icon: GithubIcon,
+  },
+  {
+    label: "Location",
+    value: "Toronto, Canada",
+    href: null,
+    icon: MapPin,
+  },
+];
 
 export default function Contact() {
   return (
@@ -18,45 +45,51 @@ export default function Contact() {
 
       <div className="content-container relative z-10">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
+          <p className="text-sm font-medium tracking-wide text-accent">
+            Contact Me
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <h2 className="mt-3 font-display text-3xl font-semibold text-text md:text-4xl">
             Get in touch
           </h2>
         </Reveal>
 
-        <Reveal delay={0.1} className="mt-6 max-w-xl">
-          <p className="text-muted">
-            Placeholder — send me the contact details/socials you want listed
-            here.
-          </p>
-        </Reveal>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          {CONTACT_ITEMS.map((item, i) => {
+            const Icon = item.icon;
+            const content = (
+              <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 transition-all hover:-translate-y-1 hover:border-accent">
+                <Icon size={20} />
+                <div>
+                  <p className="text-sm text-muted">{item.label}</p>
+                  <p className="text-text">{item.value}</p>
+                </div>
+              </div>
+            );
 
-        <Reveal delay={0.2} className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="mailto:hello@example.com"
-            className="flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm text-text transition-all hover:-translate-y-1 hover:border-accent"
-          >
-            <Mail size={16} />
-            Email
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm text-text transition-all hover:-translate-y-1 hover:border-accent"
-          >
-            <GithubIcon size={16} />
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm text-text transition-all hover:-translate-y-1 hover:border-accent"
-          >
-            <LinkedinIcon size={16} />
-            LinkedIn
-          </a>
-        </Reveal>
+            return (
+              <Reveal key={item.label} delay={0.05 * (i + 1)}>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      item.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  content
+                )}
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
