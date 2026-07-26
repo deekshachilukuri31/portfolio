@@ -19,8 +19,8 @@ export default function Hero() {
 
         <Reveal delay={0.1}>
           <h1
-            className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight text-text sm:text-5xl md:text-6xl"
-            style={{ fontVariationSettings: '"opsz" 144, "SOFT" 20' }}
+            className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-text sm:text-5xl md:text-6xl"
+            style={{ fontVariationSettings: '"opsz" 60, "SOFT" 0' }}
           >
             Hey there,
             <br />
