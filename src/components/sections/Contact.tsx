@@ -1,5 +1,6 @@
 import { Mail, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons";
+import { ContactIcon } from "../sectionIcons";
 import Reveal from "../Reveal";
 
 const CONTACT_ITEMS = [
@@ -45,15 +46,18 @@ export default function Contact() {
 
       <div className="content-container relative z-10">
         <Reveal>
-          <p className="text-sm font-medium tracking-wide text-accent">
+          <p className="text-base font-medium tracking-wide text-accent sm:text-lg">
             Contact Me
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h2 className="mt-3 font-display text-3xl font-semibold text-text md:text-4xl">
-            Get in touch
-          </h2>
+          <div className="mt-3 flex items-center gap-3">
+            <ContactIcon />
+            <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
+              Get in touch
+            </h2>
+          </div>
         </Reveal>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">

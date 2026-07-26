@@ -1,4 +1,5 @@
 import Reveal from "../Reveal";
+import { ExperienceIcon } from "../sectionIcons";
 
 const ROLES = [
   {
@@ -41,9 +42,12 @@ export default function Experience() {
     >
       <div className="content-container">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
-            Experience
-          </h2>
+          <div className="flex items-center gap-3">
+            <ExperienceIcon />
+            <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
+              Experience
+            </h2>
+          </div>
         </Reveal>
 
         <div className="relative mt-14 border-l border-border pl-8 md:border-l-0 md:pl-0">
@@ -64,7 +68,7 @@ export default function Experience() {
                       : "md:col-start-2 md:pl-10"
                   }
                 >
-                  <p className="text-sm font-medium tracking-wide text-accent">
+                  <p className="text-base font-medium tracking-wide text-accent sm:text-lg">
                     {role.period}
                   </p>
                   <h3 className="mt-2 font-display text-xl font-semibold text-text md:text-2xl">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import DoodleFilters from "@/components/DoodleFilters";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -29,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`dark ${spaceGrotesk.variable} ${inter.variable}`}>
-      <body className="bg-bg font-sans text-text antialiased">{children}</body>
+      <body className="bg-bg font-sans text-text antialiased">
+        <DoodleFilters />
+        {children}
+      </body>
     </html>
   );
 }

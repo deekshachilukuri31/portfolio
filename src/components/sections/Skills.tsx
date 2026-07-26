@@ -1,4 +1,5 @@
 import Reveal from "../Reveal";
+import { SkillsIcon } from "../sectionIcons";
 
 const SKILL_GROUPS = [
   {
@@ -58,15 +59,18 @@ export default function Skills() {
     <section id="skills" className="section-padding border-t border-border">
       <div className="content-container">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
-            Skills
-          </h2>
+          <div className="flex items-center gap-3">
+            <SkillsIcon />
+            <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
+              Skills
+            </h2>
+          </div>
         </Reveal>
 
         <div className="mt-10 flex flex-col gap-8">
           {SKILL_GROUPS.map((group, i) => (
             <Reveal key={group.category} delay={0.05 * (i + 1)}>
-              <h3 className="text-sm font-medium tracking-wide text-accent">
+              <h3 className="text-base font-medium tracking-wide text-accent sm:text-lg">
                 {group.category}
               </h3>
               <div className="mt-4 flex flex-wrap gap-3">

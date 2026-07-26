@@ -1,4 +1,5 @@
 import Reveal from "../Reveal";
+import { AboutIcon } from "../sectionIcons";
 
 const WHAT_I_DO = [
   {
@@ -44,13 +45,16 @@ export default function About() {
     <section id="about" className="section-padding border-t border-border">
       <div className="content-container">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
-            About
-          </h2>
+          <div className="flex items-center gap-3">
+            <AboutIcon />
+            <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
+              About
+            </h2>
+          </div>
         </Reveal>
 
         <Reveal delay={0.1} className="mt-10">
-          <p className="text-sm font-medium tracking-wide text-accent">
+          <p className="text-base font-medium tracking-wide text-accent sm:text-lg">
             What I Do
           </p>
         </Reveal>

@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import FloatingNodes from "./FloatingNodes";
 import DoodleIcons from "./DoodleIcons";
 import Reveal from "./Reveal";
@@ -31,17 +32,20 @@ export default function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.3}>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#projects"
-              className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-text transition-transform hover:-translate-y-1"
-            >
-              View Projects
-            </a>
-          </div>
-        </Reveal>
       </div>
+
+      <Reveal
+        delay={0.4}
+        className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2"
+      >
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-sm text-muted transition-colors hover:text-text"
+        >
+          Scroll Down
+          <ChevronDown className="animate-bounce" size={20} />
+        </a>
+      </Reveal>
     </section>
   );
 }

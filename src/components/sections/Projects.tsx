@@ -1,4 +1,5 @@
 import Reveal from "../Reveal";
+import { ProjectsIcon } from "../sectionIcons";
 
 const GITHUB_PROFILE = "https://github.com/deekshachilukuri31";
 const MEDIUM_PROFILE = "https://medium.com/@deekshachilukuri31";
@@ -86,13 +87,16 @@ export default function Projects() {
     <section id="projects" className="section-padding border-t border-border">
       <div className="content-container">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
-            Projects & Certifications
-          </h2>
+          <div className="flex items-center gap-3">
+            <ProjectsIcon />
+            <h2 className="font-display text-3xl font-semibold text-text md:text-4xl">
+              Projects & Certifications
+            </h2>
+          </div>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-border bg-surface p-6">
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-dashed border-border bg-surface p-6">
             <p className="font-display text-lg font-medium text-text">
               Checkout My Latest Tech Blogs
             </p>
@@ -108,7 +112,7 @@ export default function Projects() {
         </Reveal>
 
         <Reveal delay={0.15} className="mt-16">
-          <p className="text-sm font-medium tracking-wide text-accent">
+          <p className="text-base font-medium tracking-wide text-accent sm:text-lg">
             Projects
           </p>
         </Reveal>
@@ -138,7 +142,7 @@ export default function Projects() {
         </div>
 
         <Reveal delay={0.1} className="mt-16">
-          <p className="text-sm font-medium tracking-wide text-accent">
+          <p className="text-base font-medium tracking-wide text-accent sm:text-lg">
             Certifications
           </p>
         </Reveal>
