@@ -3,9 +3,8 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border py-8">
-      <div className="content-container flex flex-col items-center justify-between gap-2 text-sm text-muted sm:flex-row">
+      <div className="content-container flex items-center justify-center text-sm text-muted">
         <p>© {year} Deeksha Chilukuri</p>
-        <p>Built with Next.js &amp; Tailwind CSS</p>
       </div>
     </footer>
   );
