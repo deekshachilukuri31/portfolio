@@ -49,7 +49,7 @@ export default function Nav() {
 
         <div className="hidden md:block">
           <a
-            href="/resume.pdf"
+            href="/portfolio/resume.pdf"
             className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-text transition-transform hover:-translate-y-0.5"
           >
             Resume
@@ -80,7 +80,7 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="/portfolio/resume.pdf"
               className="mt-2 w-fit rounded-full bg-accent px-5 py-2 text-sm font-medium text-text"
               onClick={() => setOpen(false)}
             >
