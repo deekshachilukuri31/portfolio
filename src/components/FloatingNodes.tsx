@@ -15,7 +15,7 @@ type Node = {
 const NODES: Node[] = [
   { top: 15, left: 10, size: 10, driftDuration: 7, driftDelay: 0, glowDuration: 4.5, glowDelay: 0 },
   { top: 30, left: 80, size: 16, driftDuration: 8, driftDelay: 1, glowDuration: 5.5, glowDelay: 0.8 },
-  { top: 55, left: 25, size: 8, driftDuration: 6, driftDelay: 0.5, glowDuration: 4, glowDelay: 1.6 },
+  { top: 48, left: 60, size: 8, driftDuration: 6, driftDelay: 0.5, glowDuration: 4, glowDelay: 1.6 },
   { top: 65, left: 65, size: 13, driftDuration: 9, driftDelay: 2, glowDuration: 6, glowDelay: 0.4 },
   { top: 80, left: 40, size: 10, driftDuration: 7.5, driftDelay: 1.5, glowDuration: 5, glowDelay: 2.2 },
   { top: 22, left: 52, size: 7, driftDuration: 6.5, driftDelay: 2.5, glowDuration: 4.8, glowDelay: 1.2 },

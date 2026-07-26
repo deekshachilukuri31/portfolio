@@ -73,11 +73,11 @@ export default function Skills() {
               <h3 className="text-base font-medium tracking-wide text-accent sm:text-lg">
                 {group.category}
               </h3>
-              <div className="mt-4 flex flex-wrap gap-3">
+              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-muted transition-colors hover:border-accent hover:text-text"
+                    className="rounded-lg border border-border bg-surface px-4 py-2 text-center text-sm text-muted transition-colors hover:border-accent hover:text-text"
                   >
                     {skill}
                   </span>
