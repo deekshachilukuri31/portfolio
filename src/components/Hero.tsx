@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="content-container relative z-10">
         <Reveal>
           <p className="text-lg font-medium tracking-wide text-accent sm:text-xl">
-            Data Scientist
+            Senior Data Scientist · 5+ Years Experience
           </p>
         </Reveal>
 
@@ -29,8 +29,9 @@ export default function Hero() {
 
         <Reveal delay={0.2}>
           <p className="mt-6 max-w-xl text-base text-muted sm:text-lg">
-            Data science, analytics engineering, and the infrastructure
-            between them.
+            I own data problems end-to-end — from ambiguous question to
+            production system — building analytics infrastructure that
+            teams trust to make high-stakes decisions.
           </p>
         </Reveal>
 
