@@ -15,13 +15,15 @@ export default function Hero() {
       <div className="content-container relative z-10">
         <Reveal>
           <p className="text-lg font-medium tracking-wide text-accent sm:text-xl">
-            Hey there! I&apos;m Deeksha
+            Data Scientist
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-text sm:text-5xl md:text-6xl">
-            Data Scientist
+            Hey there,
+            <br />
+            <span className="italic text-accent">I&apos;m Deeksha.</span>
           </h1>
         </Reveal>
 
