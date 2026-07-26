@@ -123,7 +123,7 @@ export default function Projects() {
                   </h3>
                   <span className="text-sm text-muted">{project.period}</span>
                 </div>
-                <p className="mt-3 flex-1 text-muted">{project.description}</p>
+                <p className="mt-3 flex-1 text-text/70">{project.description}</p>
                 <a
                   href={project.href}
                   target="_blank"
@@ -154,7 +154,7 @@ export default function Projects() {
                   </span>
                 </div>
                 {cert.description && (
-                  <p className="mt-2 text-sm text-muted">
+                  <p className="mt-2 text-sm text-text/70">
                     {cert.description}
                   </p>
                 )}

@@ -12,21 +12,20 @@ export default function Hero() {
       <div className="content-container relative z-10">
         <Reveal>
           <p className="text-sm font-medium tracking-wide text-accent">
-            Senior Data Scientist / Analytics Engineer
+            Hey there! I&apos;m Deeksha
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-text sm:text-5xl md:text-6xl">
-            Data doesn&apos;t move until it&apos;s reconciled.
+            Data Scientist
           </h1>
         </Reveal>
 
         <Reveal delay={0.2}>
           <p className="mt-6 max-w-xl text-base text-muted sm:text-lg">
-            I&apos;m a data scientist building the systems that match network
-            and ledger data at scale — so product and finance teams can trust
-            every number they see.
+            Data science, analytics engineering, and the infrastructure
+            between them.
           </p>
         </Reveal>
 

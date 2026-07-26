@@ -30,23 +30,38 @@ export default function Education() {
           </h2>
         </Reveal>
 
-        <div className="mt-10 flex flex-col gap-4">
-          {SCHOOLS.map((item, i) => (
-            <Reveal key={i} delay={0.05 * (i + 1)}>
-              <div className="rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent">
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="font-display text-lg font-medium text-text">
+        <div className="relative mt-14 border-l border-border pl-8 md:border-l-0 md:pl-0">
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-border md:block" />
+          {SCHOOLS.map((item, i) => {
+            const isEven = i % 2 === 0;
+            return (
+              <Reveal
+                key={i}
+                delay={0.05 * (i + 1)}
+                className="relative pb-12 last:pb-0 md:grid md:grid-cols-2 md:gap-10"
+              >
+                <span className="absolute -left-8 top-1.5 h-3 w-3 -translate-x-1/2 rounded-full bg-accent shadow-glow md:left-1/2" />
+                <div
+                  className={
+                    isEven
+                      ? "md:col-start-1 md:pr-10 md:text-right"
+                      : "md:col-start-2 md:pl-10"
+                  }
+                >
+                  <p className="text-sm font-medium tracking-wide text-accent">
+                    {item.period}
+                  </p>
+                  <h3 className="mt-2 font-display text-xl font-semibold text-text md:text-2xl">
                     {item.degree}
                   </h3>
-                  <span className="text-sm text-muted">{item.period}</span>
+                  <p className="mt-1 text-text/70">{item.school}</p>
+                  <p className="mt-3 text-sm text-text/70">
+                    Relevant coursework: {item.coursework}
+                  </p>
                 </div>
-                <p className="mt-2 text-sm text-muted">{item.school}</p>
-                <p className="mt-3 text-sm text-muted">
-                  Relevant coursework: {item.coursework}
-                </p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
