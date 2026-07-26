@@ -9,8 +9,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "var(--bg)",
+        surface: "var(--surface)",
+        border: "var(--border)",
+        text: "var(--text)",
+        muted: "var(--muted)",
+        accent: "var(--accent)",
+      },
+      fontFamily: {
+        display: ["var(--font-space-grotesk)", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
+      },
+      maxWidth: {
+        content: "1200px",
+      },
+      boxShadow: {
+        glow: "0 0 24px 4px var(--accent)",
+      },
+      keyframes: {
+        drift: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-18px)" },
+        },
+        pulseLine: {
+          "0%, 100%": { opacity: "0.15" },
+          "50%": { opacity: "0.6" },
+        },
+      },
+      animation: {
+        drift: "drift 8s ease-in-out infinite",
+        "pulse-line": "pulseLine 5s ease-in-out infinite",
       },
     },
   },

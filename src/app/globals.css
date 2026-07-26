@@ -3,25 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0d0a16;
+  --surface: #17131f;
+  --border: #211c30;
+  --text: #f2eff8;
+  --muted: #9c93b0;
+  --accent: #b15cff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .section-padding {
+    @apply py-20 md:py-[120px];
+  }
+
+  .content-container {
+    @apply mx-auto w-full max-w-content px-6 md:px-8;
+  }
+
+  .hairline-border {
+    border-color: var(--border);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
