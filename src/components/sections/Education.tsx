@@ -35,7 +35,7 @@ export default function Education() {
         </Reveal>
 
         <div className="relative mt-14 border-l border-border pl-8 md:border-l-0 md:pl-0">
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-border md:block" />
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-accent/50 shadow-[0_0_12px_2px_var(--accent)] md:block" />
           {SCHOOLS.map((item, i) => {
             const isEven = i % 2 === 0;
             return (

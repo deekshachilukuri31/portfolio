@@ -60,17 +60,29 @@ export default function About() {
         </Reveal>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {WHAT_I_DO.map((item, i) => (
-            <Reveal key={item.title} delay={0.05 * (i + 1)}>
-              <div className="h-full rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent">
-                <span className="text-3xl">{item.emoji}</span>
-                <h3 className="mt-3 font-display text-lg font-medium text-text">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-text/70">{item.description}</p>
-              </div>
-            </Reveal>
-          ))}
+          {WHAT_I_DO.map((item, i) => {
+            const tilts = [
+              "md:rotate-[-1.4deg]",
+              "md:rotate-[1deg]",
+              "md:rotate-[-0.6deg]",
+              "md:rotate-[0.8deg]",
+              "md:rotate-[-1deg]",
+              "md:rotate-[1.2deg]",
+            ];
+            return (
+              <Reveal key={item.title} delay={0.05 * (i + 1)}>
+                <div
+                  className={`h-full rounded-2xl border border-dashed border-text/40 bg-surface p-6 transition-all hover:-translate-y-1 hover:rotate-0 hover:border-accent ${tilts[i % tilts.length]}`}
+                >
+                  <span className="text-3xl">{item.emoji}</span>
+                  <h3 className="mt-3 font-display text-lg font-medium text-text">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-text/70">{item.description}</p>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
