@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import FloatingNodes from "./FloatingNodes";
+import AmbientGlow from "./AmbientGlow";
 import DoodleIcons from "./DoodleIcons";
 import Reveal from "./Reveal";
 
@@ -9,7 +9,7 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen items-center overflow-hidden pt-16"
     >
-      <FloatingNodes />
+      <AmbientGlow />
       <DoodleIcons />
 
       <div className="content-container relative z-10">

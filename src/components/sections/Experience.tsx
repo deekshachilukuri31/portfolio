@@ -38,7 +38,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="section-padding border-t border-border"
+      className="border-t border-border py-14 md:py-20"
     >
       <div className="content-container">
         <Reveal>
@@ -50,31 +50,27 @@ export default function Experience() {
           </div>
         </Reveal>
 
-        <div className="relative mt-10 border-l border-border pl-8 md:border-l-0 md:pl-0">
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-accent/50 shadow-[0_0_12px_2px_var(--accent)] md:block" />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {ROLES.map((role, i) => {
-            const isEven = i % 2 === 0;
+            const isSage = i % 2 === 0;
+            const bg = isSage ? "bg-sage" : "bg-lavender";
+            const ink = isSage ? "text-sage-ink" : "text-lavender-ink";
+            const dot = isSage ? "bg-sage-ink" : "bg-lavender-ink";
             return (
-              <Reveal
-                key={i}
-                delay={0.05 * (i + 1)}
-                className="relative pb-6 last:pb-0 md:grid md:grid-cols-2 md:gap-10"
-              >
-                <span className="absolute -left-8 top-1.5 h-3 w-3 -translate-x-1/2 rounded-full bg-accent shadow-glow md:left-1/2" />
+              <Reveal key={i} delay={0.04 * (i + 1)}>
                 <div
-                  className={
-                    isEven
-                      ? "md:col-start-1 md:pr-10 md:text-right"
-                      : "md:col-start-2 md:pl-10"
-                  }
+                  className={`relative rounded-2xl ${bg} py-5 pl-7 pr-5 transition-transform hover:-translate-y-1`}
                 >
-                  <p className="text-sm font-medium tracking-wide text-accent">
+                  <span className={`absolute left-3 top-6 h-2.5 w-2.5 rounded-full ${dot}`} />
+                  <p className={`text-xs font-medium tracking-wide ${ink} opacity-70`}>
                     {role.period}
                   </p>
-                  <h3 className="mt-1 font-display text-lg font-semibold text-text md:text-xl">
+                  <h3 className={`mt-1 font-display text-lg font-semibold ${ink}`}>
                     {role.title}
                   </h3>
-                  <p className="mt-0.5 text-text/70">{role.company}</p>
+                  <p className={`mt-0.5 text-sm ${ink} opacity-80`}>
+                    {role.company}
+                  </p>
                 </div>
               </Reveal>
             );

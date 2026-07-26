@@ -15,6 +15,10 @@ const config: Config = {
         text: "var(--text)",
         muted: "var(--muted)",
         accent: "var(--accent)",
+        sage: "var(--sage)",
+        "sage-ink": "var(--sage-ink)",
+        lavender: "var(--lavender)",
+        "lavender-ink": "var(--lavender-ink)",
       },
       fontFamily: {
         display: ["var(--font-fraunces)", "serif"],
