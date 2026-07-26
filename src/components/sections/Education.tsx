@@ -22,7 +22,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="section-padding border-t border-border"
+      className="border-t border-border py-14 md:py-20"
     >
       <div className="content-container">
         <Reveal>
@@ -34,7 +34,7 @@ export default function Education() {
           </div>
         </Reveal>
 
-        <div className="relative mt-14 border-l border-border pl-8 md:border-l-0 md:pl-0">
+        <div className="relative mt-8 border-l border-border pl-8 md:border-l-0 md:pl-0">
           <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-accent/50 shadow-[0_0_12px_2px_var(--accent)] md:block" />
           {SCHOOLS.map((item, i) => {
             const isEven = i % 2 === 0;
@@ -42,7 +42,7 @@ export default function Education() {
               <Reveal
                 key={i}
                 delay={0.05 * (i + 1)}
-                className="relative pb-12 last:pb-0 md:grid md:grid-cols-2 md:gap-10"
+                className="relative pb-6 last:pb-0 md:grid md:grid-cols-2 md:gap-10"
               >
                 <span className="absolute -left-8 top-1.5 h-3 w-3 -translate-x-1/2 rounded-full bg-accent shadow-glow md:left-1/2" />
                 <div
@@ -52,14 +52,14 @@ export default function Education() {
                       : "md:col-start-2 md:pl-10"
                   }
                 >
-                  <p className="text-base font-medium tracking-wide text-accent sm:text-lg">
+                  <p className="text-sm font-medium tracking-wide text-accent">
                     {item.period}
                   </p>
-                  <h3 className="mt-2 font-display text-xl font-semibold text-text md:text-2xl">
+                  <h3 className="mt-1 font-display text-lg font-semibold text-text md:text-xl">
                     {item.degree}
                   </h3>
-                  <p className="mt-1 text-text/70">{item.school}</p>
-                  <p className="mt-3 text-sm text-text/70">
+                  <p className="mt-0.5 text-sm text-text/70">{item.school}</p>
+                  <p className="mt-2 text-sm text-text/70">
                     Relevant coursework: {item.coursework}
                   </p>
                 </div>

@@ -56,7 +56,7 @@ const SKILL_GROUPS = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding border-t border-border">
+    <section id="skills" className="border-t border-border py-14 md:py-20">
       <div className="content-container">
         <Reveal>
           <div className="flex items-center gap-3">
@@ -67,17 +67,17 @@ export default function Skills() {
           </div>
         </Reveal>
 
-        <div className="mt-10 flex flex-col gap-8">
+        <div className="mt-6 flex flex-col gap-5">
           {SKILL_GROUPS.map((group, i) => (
             <Reveal key={group.category} delay={0.05 * (i + 1)}>
-              <h3 className="text-base font-medium tracking-wide text-accent sm:text-lg">
+              <h3 className="text-sm font-medium tracking-wide text-accent">
                 {group.category}
               </h3>
-              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+              <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-5">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-lg border border-border bg-surface px-4 py-2 text-center text-sm text-muted transition-colors hover:border-accent hover:text-text"
+                    className="rounded-lg border border-border bg-surface px-3 py-1.5 text-center text-sm text-muted transition-colors hover:border-accent hover:text-text"
                   >
                     {skill}
                   </span>

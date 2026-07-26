@@ -69,22 +69,16 @@ export default function About() {
               "md:rotate-[-1deg]",
               "md:rotate-[1.2deg]",
             ];
-            const isSage = i % 2 === 0;
-            const bg = isSage ? "bg-sage" : "bg-lavender";
-            const ink = isSage ? "text-sage-ink" : "text-lavender-ink";
-            const border = isSage
-              ? "border-sage-ink/30"
-              : "border-lavender-ink/30";
             return (
               <Reveal key={item.title} delay={0.05 * (i + 1)}>
                 <div
-                  className={`h-full rounded-2xl border border-dashed ${border} ${bg} p-6 transition-all hover:-translate-y-1 hover:rotate-0 ${tilts[i % tilts.length]}`}
+                  className={`h-full rounded-2xl border border-dashed border-text/40 bg-surface p-6 transition-all hover:-translate-y-1 hover:rotate-0 hover:border-accent ${tilts[i % tilts.length]}`}
                 >
                   <span className="text-3xl">{item.emoji}</span>
-                  <h3 className={`mt-3 font-display text-lg font-medium ${ink}`}>
+                  <h3 className="mt-3 font-display text-lg font-medium text-text">
                     {item.title}
                   </h3>
-                  <p className={`mt-3 ${ink} opacity-80`}>{item.description}</p>
+                  <p className="mt-3 text-text/70">{item.description}</p>
                 </div>
               </Reveal>
             );
