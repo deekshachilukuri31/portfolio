@@ -17,8 +17,8 @@ const config: Config = {
         accent: "var(--accent)",
       },
       fontFamily: {
-        display: ["var(--font-space-grotesk)", "sans-serif"],
-        sans: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-fraunces)", "serif"],
+        sans: ["var(--font-karla)", "sans-serif"],
       },
       maxWidth: {
         content: "1200px",

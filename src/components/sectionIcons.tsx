@@ -2,7 +2,7 @@ type IconProps = { className?: string };
 
 const strokeProps = {
   fill: "none",
-  stroke: "var(--accent)",
+  stroke: "var(--text)",
   strokeWidth: 3,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
@@ -36,7 +36,7 @@ export function AboutIcon({ className }: IconProps) {
       <g {...strokeProps}>
         <rect x="8" y="10" width="44" height="28" rx="10" />
       </g>
-      <polygon points="20,38 14,50 30,38" fill="none" stroke="var(--accent)" strokeWidth={3} strokeLinejoin="round" />
+      <polygon points="20,38 14,50 30,38" fill="none" stroke="var(--text)" strokeWidth={3} strokeLinejoin="round" />
     </Base>
   );
 }
@@ -71,7 +71,7 @@ export function EducationIcon({ className }: IconProps) {
       <g {...strokeProps}>
         <polygon points="30,12 54,25 30,38 6,25" />
         <line x1="46" y1="29" x2="46" y2="42" />
-        <circle cx="46" cy="45" r="2.5" fill="var(--accent)" stroke="none" />
+        <circle cx="46" cy="45" r="2.5" fill="var(--text)" stroke="none" />
       </g>
     </Base>
   );
@@ -83,7 +83,7 @@ export function ProjectsIcon({ className }: IconProps) {
       <path
         d="M6 20 h14 l4 6 h30 v24 h-48 z"
         fill="none"
-        stroke="var(--accent)"
+        stroke="var(--text)"
         strokeWidth={3}
         strokeLinecap="round"
         strokeLinejoin="round"

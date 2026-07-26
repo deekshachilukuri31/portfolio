@@ -31,7 +31,7 @@ export default function DoodleIcons() {
       >
         <g
           fill="none"
-          stroke="var(--accent)"
+          stroke="var(--text)"
           strokeWidth={3}
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -39,7 +39,7 @@ export default function DoodleIcons() {
           <circle cx="26" cy="26" r="14" />
           <line x1="36" y1="36" x2="50" y2="50" />
         </g>
-        <g fill="var(--accent)">
+        <g fill="var(--text)">
           <circle cx="21" cy="24" r="1.8" />
           <circle cx="29" cy="20" r="1.8" />
           <circle cx="30" cy="30" r="1.8" />
