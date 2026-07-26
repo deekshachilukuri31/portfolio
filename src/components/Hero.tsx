@@ -1,4 +1,5 @@
 import FloatingNodes from "./FloatingNodes";
+import DoodleIcons from "./DoodleIcons";
 import Reveal from "./Reveal";
 
 export default function Hero() {
@@ -8,10 +9,11 @@ export default function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden pt-16"
     >
       <FloatingNodes />
+      <DoodleIcons />
 
       <div className="content-container relative z-10">
         <Reveal>
-          <p className="text-sm font-medium tracking-wide text-accent">
+          <p className="text-lg font-medium tracking-wide text-accent sm:text-xl">
             Hey there! I&apos;m Deeksha
           </p>
         </Reveal>
