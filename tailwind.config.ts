@@ -15,6 +15,7 @@ const config: Config = {
         text: "var(--text)",
         muted: "var(--muted)",
         accent: "var(--accent)",
+        "accent-bright": "var(--accent-bright)",
         sage: "var(--sage)",
         "sage-ink": "var(--sage-ink)",
         lavender: "var(--lavender)",

@@ -18,10 +18,13 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-tight text-text sm:text-5xl md:text-6xl">
+          <h1
+            className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight text-text sm:text-5xl md:text-6xl"
+            style={{ fontVariationSettings: '"opsz" 144, "SOFT" 20' }}
+          >
             Hey there,
             <br />
-            <span className="italic text-accent">I&apos;m Deeksha.</span>
+            <span className="italic text-accent-bright">I&apos;m Deeksha.</span>
           </h1>
         </Reveal>
 
