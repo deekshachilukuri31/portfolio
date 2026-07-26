@@ -6,37 +6,37 @@ const WHAT_I_DO = [
     emoji: "📊",
     title: "Product Analytics",
     description:
-      "Analyzing user behavior, transaction lifecycles, and operational performance to evaluate feature impact and influence product strategy.",
+      "Own product analytics end-to-end — from the user behavior and transaction lifecycle down to the metric that changes roadmap and strategy.",
   },
   {
     emoji: "🤖",
     title: "AI-Powered Analytics & ML",
     description:
-      "Building AI-driven workflows that automate analysis, surface risks, and accelerate decisions using LLMs and machine learning.",
+      "Architect AI-driven analytics end-to-end, from LLM workflow design to production — cutting incident response time by up to 90%.",
   },
   {
     emoji: "📈",
     title: "Metrics & Measurement",
     description:
-      "Defining product and operational KPIs and building the dashboards teams rely on to track performance.",
+      "Own the metrics layer end-to-end — defining the KPIs and building the dashboards leadership trusts as the single source of truth.",
   },
   {
     emoji: "🧪",
     title: "Statistical Analysis & Experimentation",
     description:
-      "Applying experimentation and causal reasoning to quantify business impact.",
+      "Lead experimentation end-to-end — design, causal analysis, and the go/no-go call — to quantify real, high-stakes business impact.",
   },
   {
     emoji: "⚙️",
     title: "Analytics Engineering",
     description:
-      "Designing scalable SQL data models and metric layers that establish trusted business definitions.",
+      "Architect the data platform end-to-end, from raw pipelines to a centralized metrics layer trusted across 100+ enterprise customers.",
   },
   {
     emoji: "🤝",
     title: "Cross-Functional Partnership",
     description:
-      "Translating ambiguous questions from Product, Engineering, Finance, Risk, and Operations into data products.",
+      "Operate as the senior bridge across Product, Engineering, Finance, Risk, and Ops — turning ambiguity into shipped, high-impact data products.",
   },
 ];
 
